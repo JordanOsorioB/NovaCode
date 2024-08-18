@@ -1,0 +1,633 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1;
+}
+footer {
+    background-color: #2c2f33;
+    padding: 20px 0;
+}
+
+
+/*Cambio tipografia*/
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; /* Ajusta el tamaño de la fuente base */
+    color: #333; /* Color de texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600; /* Grosor de la letra */
+    color: #000; /* Color de los encabezados */
+}
+
+p {
+    font-size: 18px; /* Tamaño de letra para párrafos */
+}
+
+.description-content p {
+    font-size: 18px; /* Tamaño de letra para el contenido de descripción */
+    color: #333; /* Color del texto */
+}
+
+.service-card h5 {
+    font-size: 20px; /* Tamaño de letra para los títulos de las tarjetas */
+    font-weight: 600;
+}
+
+.service-card p {
+    font-size: 16px; /* Tamaño de letra para el texto de las tarjetas */
+    color: #666; /* Color del texto de las tarjetas */
+}
+
+.service-link {
+    font-size: 16px;
+    font-weight: 600;
+    color: #ff007f; /* Cambia este color según tu diseño */
+}
+
+.footer p {
+    font-size: 16px;
+    color: #ccc; /* Color del texto en el pie de página */
+}
+
+
+/*tarjetas */
+.service-card {
+    background-color: #ffffff;
+    border: none;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+}
+
+.service-icon {
+    width: 50px;
+    height: 50px;
+}
+
+.service-link {
+    color: #319b95;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.service-link:hover {
+    text-decoration: underline;
+}
+
+/*Portada*/
+
+.banner-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.banner-image {
+    width: 100%;
+    height: 450px; /* Ajusta la altura según lo necesario */
+    object-fit: cover; /* Para que la imagen se ajuste correctamente sin perder proporción */
+    display: block;
+}
+
+/* Descripción */
+
+.description-container {
+    background-color: #319b95;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.description-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    color: #000;
+}
+
+.description-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+/*Navbar*/
+
+.navbar {
+    background-color: #ffffff !important;
+}
+.navbar-brand {
+    color: #000000 !important;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #000000 !important;
+    font-size: 1.1em;
+}
+.btn-verde {
+    background-color: #319b95; /* Color morado */
+    border-color: #319b95; /* Color del borde morado */
+    color: #ffffff; /* Color del texto blanco */
+}
+
+.btn-verde:hover {
+    background-color: #1e7aaf; /* Color morado oscuro para el hover */
+    border-color: #1e7aaf; /* Color del borde morado oscuro para el hover */
+}
+/* check */
+
+.image-container {
+    position: relative;
+}
+
+.icon {
+    position: absolute;
+    width: 60px; /* Tamaño del icono */
+    height: 60px; /* Tamaño del icono */
+}
+
+.icon-1 {
+    top: 10%;
+    left: 10%;
+}
+
+.icon-2 {
+    top: 40%;
+    left: 70%;
+}
+
+.icon-3 {
+    top: 80%;
+    left: 20%;
+}
+
+.list-unstyled li {
+    font-size: 1.1em;
+}
+
+.bi-check-circle-fill {
+    color: #6c63ff;
+    margin-right: 10px;
+}
+
+/*inicio*/
+.content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text {
+    width: 50%;
+    padding: 40px 10px; /* Aumentar el padding para mover el texto más hacia adentro */
+    margin-top: 40px; /* Añadir un margen superior para mover el texto hacia abajo */
+    margin-right: 100px; 
+}
+
+.image {
+    width: 50%;
+    text-align: center;
+    position: relative;
+    margin-left: 150px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    filter: blur(0px);
+    transition: filter 0.3s ease;
+}
+
+
+
+/* Estilos para el formulario de contacto */
+form {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+form h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+form .form-group {
+    margin-bottom: 15px;
+}
+
+form .form-control {
+    border-radius: 5px;
+    box-shadow: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+form button {
+    background-color: #319b95;
+    border-color: #319b95;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+.formulario-contenedor {
+    border: 2px solid #319b95; /* Recuadro verde */
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #319b95; /* Fondo blanco */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-contenedor form {
+    margin: 0;
+}
+
+.formulario-contenedor h5 {
+    color: #319b95; /* Color del título del formulario */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.formulario-contenedor .form-group label {
+    color: #333;
+    font-weight: bold;
+}
+
+.formulario-contenedor .form-control {
+    border: 1px solid #319b95;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.formulario-contenedor .btn-verde {
+    background-color: #319b95;
+    border-color: #319b95;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.formulario-contenedor .btn-verde:hover {
+    background-color: #000000;
+    border-color: #000000;
+}
+
+
+/*Carrusel*/
+
+.carousel-item {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.carousel-image {
+    flex: 10 10 300px; /* Tamaño de la imagen */
+    text-align: center;
+    margin-left: 200px; /* Mueve la imagen más hacia el centro */
+}
+
+.carousel-image img {
+    width: 300px; /* Tamaño de la imagen */
+    height: 300px; /* Tamaño de la imagen */
+    border: 4px solid white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    margin-right: 50px; /* Espacio entre la imagen y el texto */
+}
+
+.carousel-caption {
+    flex: 1;
+    color: #000;
+    padding-left: 50px; /* Mueve el texto más hacia el centro */
+    margin-left: 200px;
+}
+
+.carousel-caption h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.carousel-caption p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #000000;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+
+/*Footer*/
+
+.footer {
+    background-color: #000; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+.footer-heading {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer p {
+    color: #ccc; /* Texto gris claro */
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    color: #ffffff;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #319b95; /* Color verde al pasar el mouse */
+}
+
+.footer .text-reset {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .text-reset:hover {
+    color: #319b95; /* Color verde al pasar el mouse */
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .p-4 {
+    border-top: 1px solid #333;
+}
+
+/* Proyectos Destacados */
+
+#projectCarousel {
+    background: linear-gradient(to right, #134d55, #319b95);
+    padding: 40px;
+    border-radius: 15px;
+    position: relative;
+}
+
+.carousel-inner {
+    margin-bottom: 30px; /* Agregar espacio extra al final del contenido del carrusel */
+}
+.carousel-inner img {
+    height: 800px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.carousel-indicators {
+    margin-top: 30px; /* Ajustar el espacio entre el contenido del carrusel y los indicadores */
+}
+
+.proyecto-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: none;
+}
+
+.carousel-indicators button {
+    background-color: #f8f8f8 !important; /* Color de los indicadores */
+    border-radius: 60px !important; /* Aumenta el valor para hacer los botones más redondeados */
+    width: 60px !important; /* Aumenta el ancho */
+    height: 12px !important; /* Mantén la altura */
+    margin: 0px 5px !important;
+    cursor: pointer !important;
+    transition: background-color 0.5s ease !important;
+}
+
+.carousel-indicators .active {
+    background-color: #131414 !important; /* Color cuando está activo */
+}
+
+.proyecto-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.text-center {
+    text-align: center;
+    color: #ffffff;
+}
+
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.image-right img {
+    width: 100%;
+    height: 600px; /* Establece una altura fija para todas las imágenes */
+    object-fit: cover; /* Hace que la imagen se recorte para llenar el espacio, manteniendo la relación de aspecto */
+    border-radius: 15px;
+}
+
+
+
+/*Cambios en el inicio imagen degradé*/
+
+.content-wrapper {
+    width: 100%;
+    background: linear-gradient(to bottom, #ffffff, #319b95); /* Degradado de blanco a verde */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0; /* Añade padding si deseas espacio arriba y abajo */
+    box-sizing: border-box;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text {
+    width: 50%;
+    padding: 40px 10px;
+    margin-top: 40px;
+    margin-right: 100px;
+    color: #000; /* Color del texto */
+}
+
+.image {
+    width: 50%;
+    text-align: center;
+    position: relative;
+    margin-left: 150px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    filter: blur(0px);
+    transition: filter 0.3s ease;
+}
+/* Estilo para la página de agradecimiento */
+.container.text-center.my-5 {
+    padding: 50px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container.text-center.my-5 h1 {
+    color: #319b95;
+    font-weight: bold;
+}
+
+.container.text-center.my-5 p {
+    color: #555;
+    font-size: 18px;
+}
+
+.container.text-center.my-5 .btn-verde {
+    background-color: #319b95;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.container.text-center.my-5 .btn-verde:hover {
+    background-color: #267a73;
+}
+.text-center p {
+    text-align: justify;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.text-center h1 {
+    color: #319b95;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/*Nuestras tecnologias*/
+
+#techCarousel {
+    background: linear-gradient(180deg, #319b95, #ffffff);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#techCarousel .carousel-item {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+#techCarousel img {
+    max-height: 100px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+#techCarousel .carousel-inner .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Imagen del comienzo*/
+
+.img-responsive {
+    max-width: 90%; /* Ajusta el tamaño de la imagen */
+    height: auto;
+}
+
+.text-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.text-responsive {
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .text-title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .text-responsive {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .img-responsive {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
+    .row {
+        flex-direction: column-reverse;
+    }
+}

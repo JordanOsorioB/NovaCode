@@ -1,0 +1,301 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NovaCode</title>
+    <link rel="icon" href="{% static 'img/circular-blanco.png' %}" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/myWeb/" style="margin-left: 50px;">
+                <img src="{% static 'img/Logo2Trans.png' %}" alt="Logo de la empresa" style="height: 40px; width: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+     
+    <div class="content-wrapper">
+        <div class="content">
+            <div class="text">
+                <h1>Desarrollo de aplicaciones móviles y soluciones a medida.</h1>
+                <p>En NovaCode, creamos soluciones digitales que se adaptan a las necesidades de tu negocio, impulsando eficiencia y seguridad en cada desarrollo.</p>
+                <a href="#contacto" class="btn btn-verde">¡Contáctanos!</a>
+            </div>
+            <div class="image">
+                <img src="{% static 'img/inicio.png' %}" alt="Imagen descriptiva">
+            </div>
+        </div>
+    </div>
+    
+    <br>
+    <div class="container my-5">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-6">
+                <img src="{% static 'img/proyecto6.png' %}" class="img-fluid rounded img-responsive" alt="Imagen descriptiva">
+            </div>
+            <div class="col-md-6 text-responsive">
+                <h2 class="text-title" style="text-align: center;">Por qué elegir NovaCode</h2><br>
+                <ul class="list-unstyled">
+                    <li class="mb-4">
+                        <i class="bi bi-check-circle-fill"></i>Más de 3 años desarrollando soluciones móviles y web que transforman negocios.
+                        Experiencia en proyectos exitosos para diferentes industrias, adaptándonos a las necesidades específicas de cada cliente.
+                        Comprometidos con la entrega de resultados de alta calidad, siempre dentro del plazo acordado.
+                        Especialistas en impulsar la transformación digital, ayudando a nuestros clientes a mantenerse a la vanguardia de la innovación.
+                        Total satisfacción del cliente, garantizada por nuestro enfoque personalizado y dedicado en cada proyecto.
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+    </div><br>
+
+<!-- Tablero de Proyectos -->
+<div id="projectCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <h2 class="text-center text-white">Nuestros Proyectos Realizados</h2><br>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="row">
+                {% for proyecto in Proyectos %}
+                <div class="col-md-6">
+                    <img src="{% static 'img/' %}{{ proyecto.img_proyecto }}" class="d-block w-100 img-fluid" alt="{{ proyecto.nombre_proyecto }}">
+                </div>
+                {% if forloop.counter|divisibleby:"2" and not forloop.last %}
+                    </div>
+                    </div>
+                    <div class="carousel-item">
+                    <div class="row">
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Indicadores de navegación -->
+    <div class="carousel-indicators">
+        {% for i in "0123456789"|slice:"0:Proyectos|length|add:'1'|divisibleby:2" %}
+        <button type="button" data-bs-target="#projectCarousel" data-bs-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}" aria-current="{% if forloop.first %}true{% endif %}"></button>
+        {% endfor %}
+    </div>
+</div>
+
+    
+
+   
+    
+
+
+<br><br><br>
+    <!-- Carrusel de Servicios -->
+<div class="container my-4">
+    <h2 class="text-center">Servicios</h2>
+    <br><br>
+    <div class="row text-center">
+        {% for servicio in Servicios %}
+            <div class="col-md-4 mb-4">
+                <div class="service-card">
+                    <img src="{% static 'img/' %}{{ servicio.img_servicio }}" alt="{{ servicio.nombre_servicio }}" class="service-icon mb-3">
+                    <h5>{{ servicio.nombre_servicio }}</h5><br>
+                    <p>{{ servicio.descripcion }}</p>
+                    <a href="#contacto" class="service-link">Más información</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+    <br><br>
+    
+
+    <br><br><br><br>
+    
+
+
+
+<!-- /*Nuestras tecnologias*/ -->
+    
+
+<div class="container my-5">
+    <h2 class="text-center">Tecnologías que Impulsan Nuestros Proyectos</h2><br>
+    <div id="techCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{% static 'img/flutter.png' %}" class="d-block mx-auto" alt="Icono 1">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'img/py.png' %}" class="d-block mx-auto" alt="Icono 2">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'img/js.png' %}" class="d-block mx-auto" alt="Icono 3">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{% static 'img/cpanel.png' %}" class="d-block mx-auto" alt="Icono 4">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'img/django.png' %}" class="d-block mx-auto" alt="Icono 5">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'img/css.png' %}" class="d-block mx-auto" alt="Icono 6">
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{% static 'img/andriod.png' %}" class="d-block mx-auto" alt="Icono 4">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'img/apple.png' %}" class="d-block mx-auto" alt="Icono 5">
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{% static 'img/java.png' %}" class="d-block mx-auto" alt="Icono 6">
+                    </div>
+                </div>
+            </div>
+            <!-- Añadir más carousel-item según sea necesario -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#techCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#techCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+</div>
+
+
+
+
+    <br><br><br>
+    <!-- Tu estructura existente de HTML -->
+    <div id="contacto" class="container my-5">
+        <div class="row">
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+                <h2 class="text-start">¡Contáctanos</h2>
+                <p class="text-start">¡Completa el formulario y nos pondremos en contacto contigo!</p>
+            </div>
+            <div class="col-md-6">
+                <div class="formulario-contenedor">
+                    <form id="contactForm" method="post" action=".">
+                        {% csrf_token %}
+                        
+                        <div class="form-group">
+                            <label for="id_nombre_contacto">Nombre*</label>
+                            {{ form.nombre_contacto }}
+                            {% if form.nombre_contacto.errors %}
+                                <div class="text-danger">
+                                    {{ form.nombre_contacto.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="id_apellidos_contacto">Apellidos*</label>
+                            {{ form.apellidos_contacto }}
+                            {% if form.apellidos_contacto.errors %}
+                                <div class="text-danger">
+                                    {{ form.apellidos_contacto.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="id_email">Email*</label>
+                            {{ form.email }}
+                            {% if form.email.errors %}
+                                <div class="text-danger">
+                                    {{ form.email.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="id_telefono">Número de teléfono*</label>
+                            {{ form.telefono }}
+                            {% if form.telefono.errors %}
+                                <div class="text-danger">
+                                    {{ form.telefono.errors }}
+                                </div>
+                            {% endif %}
+                        </div>
+                    
+                        <div class="form-group">
+                            <label for="id_mensaje">Mensaje</label>
+                            {{ form.mensaje }}
+                        </div>
+                    
+                        <button type="submit" class="btn btn-verde">Enviar</button>
+                    </form>
+                                      
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+<!-- Tu estructura existente de HTML -->
+
+    
+<br><br><br>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="/myWeb/">
+                        <img src="{% static 'img/circular-blanco.png' %}" alt="" style="width: 100px; height: auto;">                       
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="footer-heading">
+                        NovaCode:</h6>
+                    <p>
+                        Tu socio en la transformación digital
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="footer-heading">Contacto</h6>
+                    <p><i class="fas fa-home me-3"></i> Calle falsa 123 Providencia, Chile</p>
+                    <p><i class="fas fa-envelope me-3"></i> bastian.valenciaj@gmail.com</p>
+                    <p><i class="fas fa-phone me-3"></i> +569 9106 8716</p>
+                    <p><i class="fas fa-print me-3"></i> +569 6229 5548 </p>
+                </div>
+            </div>
+
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2024 Derechos Reservados:
+                <a class="text-reset fw-bold" href="#">NovaCode</a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/index.js' %}"></script>
+</body>
+</html>
